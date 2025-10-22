@@ -1,0 +1,18 @@
+;
+; Arquivo de zona para meudominio.local
+;
+$TTL    604800
+@       IN      SOA     ns1.meudominio.local. admin.meudominio.local. (
+                              2025102201   ; Serial (Use a data AAMMDDHH + ID)
+                              604800       ; Refresh
+                              86400        ; Retry
+                              2419200      ; Expire
+                              604800 )     ; Negative Cache TTL
+;
+; Servidores de Nomes (NS)
+@       IN      NS      ns1.meudominio.local.
+
+; Registros A (Endereços IPv4)
+ns1     IN      A       192.168.1.10
+web     IN      A       192.168.1.20
+db      IN      A       192.168.1.30

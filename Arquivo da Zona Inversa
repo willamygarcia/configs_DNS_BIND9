@@ -1,0 +1,19 @@
+;
+; Arquivo de zona inversa para 192.168.1.0/24
+;
+$TTL    604800
+@       IN      SOA     ns1.meudominio.local. admin.meudominio.local. (
+                              2025102201   ; Serial
+                              604800       ; Refresh
+                              86400        ; Retry
+                              2419200      ; Expire
+                              604800 )     ; Negative Cache TTL
+;
+; Servidor de Nomes
+@       IN      NS      ns1.meudominio.local.
+
+; Registros PTR (Ponteiros Inversos)
+; Note que usamos apenas o último octeto do IP
+10      IN      PTR     ns1.meudominio.local.  ; (Para 192.168.1.10)
+20      IN      PTR     web.meudominio.local.  ; (Para 192.168.1.20)
+30      IN      PTR     db.meudominio.local.   ; (Para 192.168.1.30)

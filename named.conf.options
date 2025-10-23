@@ -1,0 +1,16 @@
+options {
+        directory "/var/cache/bind";
+
+        // Adicione os IPs de encaminhadores públicos
+        forwarders {
+                8.8.8.8; // DNS do Google
+                1.1.1.1; // DNS da Cloudflare
+        };
+
+        // Restringe quem pode consultar este servidor DNS
+        // 'localhost' é permitido por padrão. Adicione sua rede local.
+        allow-query { localhost; 192.168.1.0/24; };  // Esse ip de rede local, é o ip da sua rede. 
+
+        dnssec-validation auto;
+        listen-on-v6 { any; };
+};

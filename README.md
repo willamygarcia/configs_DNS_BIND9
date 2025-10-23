@@ -9,7 +9,8 @@ Hostname do Servidor DNS: ns1.meudominio.local
 
 
 
-#Instalação do BIND9
+# Instalação do BIND9
+
 ´´´
 sudo apt update
 sudo apt install bind9 bind9utils -y
